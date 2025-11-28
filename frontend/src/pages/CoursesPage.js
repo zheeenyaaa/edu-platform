@@ -47,31 +47,13 @@ function CoursesPage() {
     );
   }
 
-  const getFilterTitle = () => {
-    switch(activeFilter) {
-      case 'enrolled': return 'Курсы, которые я прохожу';
-      case 'wishlist': return 'Курсы, которые хочу пройти';
-      case 'suggested': return 'Предложенные курсы';
-      default: return 'Мои курсы';
-    }
-  };
-
-  const getFilterSubtitle = () => {
-    switch(activeFilter) {
-      case 'enrolled': return 'Продолжайте обучение по вашим активным курсам';
-      case 'wishlist': return 'Запишитесь на интересующие вас курсы';
-      case 'suggested': return 'Изучите новые курсы, подобранные для вас';
-      default: return 'Выберите курс для продолжения обучения';
-    }
-  };
 
   return (
     <div className="courses-page">
       {/* Шапка */}
       <header className="courses-header">
         <div className="courses-header-content">
-          <h1 className="courses-title">{getFilterTitle()}</h1>
-          <p className="courses-subtitle">{getFilterSubtitle()}</p>
+          <h1 className="courses-title">Курсы</h1>
         </div>
       </header>
 
