@@ -1,0 +1,379 @@
+/* Основной контейнер страницы */
+.course-modules-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Левая панель - 25% ширины */
+.course-sidebar {
+  width: 25%;
+  min-width: 300px;
+  background-color: white;
+  border-right: 1px solid #e5e7eb;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Кнопка назад */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background-color: #f3f4f6;
+  color: #2563eb;
+}
+
+.back-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Иконка курса */
+.course-icon {
+  width: 100%;
+  height: 150px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.course-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Заголовок курса */
+.course-sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin: 0;
+}
+
+/* Секция прогресса */
+.course-progress-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.progress-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.progress-circle {
+  position: relative;
+}
+
+.progress-ring-circle-bg {
+  transition: stroke-dashoffset 0.35s;
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.35s;
+  stroke-linecap: round;
+}
+
+.progress-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  fill: #2563eb;
+  dominant-baseline: middle;
+}
+
+/* Секция описания */
+.course-description-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.description-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.course-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Метаинформация */
+.course-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.meta-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Правая панель - 75% ширины */
+.modules-main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Заголовок модулей */
+.modules-header {
+  margin-bottom: 2rem;
+}
+
+.modules-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.modules-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Контейнер модулей - вертикальное расположение */
+.modules-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+}
+
+/* Карточка модуля */
+.module-card {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.module-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.module-card.completed {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+}
+
+/* Номер модуля */
+.module-number {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Бейдж завершения */
+.completed-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: white;
+}
+
+/* Заголовок модуля */
+.module-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #111827;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Информация о модуле */
+.module-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.module-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.module-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* Кнопка модуля */
+.module-button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 500;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.875rem;
+}
+
+.module-button:hover {
+  background-color: #1d4ed8;
+}
+
+.module-card.completed .module-button {
+  background-color: #10b981;
+}
+
+.module-card.completed .module-button:hover {
+  background-color: #059669;
+}
+
+/* Загрузка */
+.loading-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 1rem;
+  color: #6b7280;
+}
+
+/* Ошибка */
+.error-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f9fafb;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .course-modules-page {
+    flex-direction: column;
+  }
+
+  .course-sidebar {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .modules-main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-sidebar {
+    padding: 1.5rem;
+  }
+
+  .modules-main {
+    padding: 1.5rem;
+  }
+
+  .modules-title {
+    font-size: 1.5rem;
+  }
+
+  .module-card {
+    min-width: 250px;
+    width: 250px;
+  }
+}
+
